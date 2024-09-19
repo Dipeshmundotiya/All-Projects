@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Alertdialog</string>
+    <string name="Description">You want to delete this file</string>
+</resources>
