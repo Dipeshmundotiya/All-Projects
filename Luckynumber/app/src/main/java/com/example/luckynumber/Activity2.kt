@@ -26,8 +26,11 @@ class Activity2 : AppCompatActivity() {
         btn.setOnClickListener()
         {
 
-            var i : Intent = Intent(Intent.ACTION_VIEW)
-            i.setData(Uri.parse("https://www.youtube.com/"))
+            var i : Intent = Intent(Intent.ACTION_SEND)
+            var username = intent.getStringExtra("NAME")
+            i.setType("text/plain")
+            i.putExtra(Intent.EXTRA_SUBJECT,"$username is Lucky Today")
+            i.putExtra(Intent.EXTRA_TEXT,"My lucky Number is ${randomnum()}")
             startActivity(i)
         }
 
